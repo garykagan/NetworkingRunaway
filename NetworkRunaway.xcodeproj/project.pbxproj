@@ -13,9 +13,11 @@
 		62770A071BAC4960004A034F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62770A051BAC4960004A034F /* Main.storyboard */; };
 		62770A091BAC4960004A034F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62770A081BAC4960004A034F /* Assets.xcassets */; };
 		62770A0C1BAC4960004A034F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62770A0A1BAC4960004A034F /* LaunchScreen.storyboard */; };
+		69EA49F275AA5DBF40860A92 /* libPods-NetworkRunaway.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BD919F15056A9D3CC59E2C /* libPods-NetworkRunaway.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40BD919F15056A9D3CC59E2C /* libPods-NetworkRunaway.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetworkRunaway.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		627709F91BAC4960004A034F /* NetworkRunaway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkRunaway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		627709FD1BAC4960004A034F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		627709FF1BAC4960004A034F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		62770A081BAC4960004A034F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62770A0B1BAC4960004A034F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62770A0D1BAC4960004A034F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DA3F3C23D05C161F9321EF7 /* Pods-NetworkRunaway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkRunaway.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkRunaway/Pods-NetworkRunaway.debug.xcconfig"; sourceTree = "<group>"; };
+		A44AA5FA7300FED64FFDE270 /* Pods-NetworkRunaway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkRunaway.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkRunaway/Pods-NetworkRunaway.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69EA49F275AA5DBF40860A92 /* libPods-NetworkRunaway.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				627709FB1BAC4960004A034F /* NetworkRunaway */,
 				627709FA1BAC4960004A034F /* Products */,
+				FFC520D88D088F09EE67FF83 /* Pods */,
+				FFB23186175572F95EE23C30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FFB23186175572F95EE23C30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40BD919F15056A9D3CC59E2C /* libPods-NetworkRunaway.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFC520D88D088F09EE67FF83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DA3F3C23D05C161F9321EF7 /* Pods-NetworkRunaway.debug.xcconfig */,
+				A44AA5FA7300FED64FFDE270 /* Pods-NetworkRunaway.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62770A101BAC4960004A034F /* Build configuration list for PBXNativeTarget "NetworkRunaway" */;
 			buildPhases = (
+				26E846FF777D2EC5EAE34C99 /* Check Pods Manifest.lock */,
 				627709F51BAC4960004A034F /* Sources */,
 				627709F61BAC4960004A034F /* Frameworks */,
 				627709F71BAC4960004A034F /* Resources */,
+				0108AF1ADF51623C0ED49641 /* Embed Pods Frameworks */,
+				9ADE9C0A949F1276D9A44A0B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0108AF1ADF51623C0ED49641 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkRunaway/Pods-NetworkRunaway-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26E846FF777D2EC5EAE34C99 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9ADE9C0A949F1276D9A44A0B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkRunaway/Pods-NetworkRunaway-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		627709F51BAC4960004A034F /* Sources */ = {
@@ -261,6 +336,7 @@
 		};
 		62770A111BAC4960004A034F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA3F3C23D05C161F9321EF7 /* Pods-NetworkRunaway.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NetworkRunaway/Info.plist;
@@ -272,6 +348,7 @@
 		};
 		62770A121BAC4960004A034F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A44AA5FA7300FED64FFDE270 /* Pods-NetworkRunaway.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NetworkRunaway/Info.plist;
@@ -300,6 +377,7 @@
 				62770A121BAC4960004A034F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
